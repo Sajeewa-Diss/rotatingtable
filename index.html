@@ -12,7 +12,7 @@
 <body>
     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem aut aperiam eum ipsam, quae sit beatae cupiditate accusantium sint reprehenderit tenetur ut sunt possimus.</p>
   <br>
-  <label for="" class="divider">my rotated table</label>
+  <label for="" class="divider">cart  rotated table</label>
   <br/>
 
 <div class="scrollable-table">
@@ -205,6 +205,201 @@
       </tfoot>
     </table>
   </div>
+
+  <br>
+  <label for="" class="divider">results rotated table</label>
+  <br/>
+
+  <div class="scrollable-table">
+      <table id="cartTable" class="table table-header-rotated fixed_headers">
+        <thead>
+          <tr>
+            <!-- First column header is not rotated -->
+            <th class="itemth"><div><span>Item</span></div></th>
+            <th class="rotate-45 priceth"><div><span><br>Price (£)</span></div></th>
+            <th class="rotate-45 qntyth"><div><span>Quantity</span></div></th>
+            <th class="rotate-45 subtotth"><div><span><br>Subtotal (£)</span></div></th>
+            <!-- Last column header is not rotated -->
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- @foreach (var line in Model.Cart.Lines){ -->
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar X</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <tr>
+              <td class="text-left itemtd">Caviar (Vegan)</td>
+              <td class="text-right pricetd">500</td>
+              <td class="text-right qntytd">3</td>
+              <td class="text-right subtottd">8500
+                  <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
+              </td>
+              <td>
+                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
+                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
+                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
+                      <input class="btn btn-sm btn-warning"
+                            type="submit" value="Remove" />
+                  <!-- } -->
+              </td>
+          </tr>
+          <!-- } -->
+        </tbody>
+        <tfoot>
+            <tr class="tablefoot">
+                <td class="text-left itemtd">Total:</td>
+                <td class="text-right pricetd"></td>
+                <td class="text-right qntytd"></td>
+                <td class="text-right subtottd">2599
+                    <!-- @Model.Cart.ComputeTotalValue().ToString("c0") -->
+                </td>
+                <td></td>
+            </tr>
+        </tfoot>
+      </table>
+    </div>
 
 <br>
 <br>
