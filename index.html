@@ -8,6 +8,7 @@
     <link href="rotate.css" rel="stylesheet" />
     <link href="site.css" rel="stylesheet" />
     <script src="modernizr-2.8.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem aut aperiam eum ipsam, quae sit beatae cupiditate accusantium sint reprehenderit tenetur ut sunt possimus.</p>
@@ -17,7 +18,8 @@
 
 <div class="scrollable-table-todo-remove">
     <!-- <table id="cartTable" class="table table-header-horiz fixed_headers"> -->
-        <table id="cartTable" class="table table-header-rotated fixed_headers">
+        <!-- <table id="cartTable" class="table table-header-rotated fixed_headers"> -->
+            <table id="cartTable" class="table fixed_headers">
       <thead>
         <tr>
           <!-- First column header is not rotated -->
@@ -211,8 +213,8 @@
   <label for="" class="divider">results rotated table</label>
   <br/>
 
-  <div class="scrollable-table">
-      <table id="cartTable" class="table table-header-rotated fixed_headers">
+  <div class="scrollable-table-todo-rename">
+      <table id="resultsTable" class="table table-header-rotated fixed_headers">
         <thead>
           <tr>
             <!-- First column header is not rotated -->
@@ -410,7 +412,7 @@
 <br/>
 <br/>
 
-<table id="cartTableHoriz" class="table">
+<table id="origCartTable" class="table">
   <thead>
       <tr>
           <th class="text-left">Item</th>
@@ -448,6 +450,18 @@
       </tr>
   </tfoot>
 </table>
+<script>
+$(window).on('resize', function() {
+    if($(window).width() < 768) {
+        $('#cartTable').addClass('table-header-rotated');
+        $('#cartTable').removeClass('table-header-horiz');
+    }else{
+        $('#cartTable').addClass('table-header-horiz');
+        $('#cartTable').removeClass('table-header-rotated');
+    }
+})
 
+
+</script>
 </body>
 </html>
