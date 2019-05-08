@@ -57,7 +57,7 @@
 
   .fixed_headers {
     table-layout: fixed;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
   }
   
   .fixed_headers thead tr {
@@ -68,4 +68,8 @@
     display: block;
     overflow: auto;
     height: 300px;
+  }
+
+  .fixed_headers tbody tr:nth-child(even) {
+    background-color: #DDD;
   }
