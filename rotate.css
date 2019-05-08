@@ -18,7 +18,8 @@
     background-color: #EEE;
   }
   
-  .fixed_headers tfoot {
+  /* .fixed_headers tfoot { */
+    .table-header-rotated tfoot {
     display: inline-block;
     overflow: auto;
     position: relative;
@@ -43,22 +44,51 @@
     text-align:left;
   }
 
-  .itemtd{
+  .table-header-horiz tbody > tr{
+    width:700px;
+    vertical-align:center;
+}
+
+.table-header-horiz .itemtd{
+    width:100px;
+    /* min-width: 95px;
+    max-width: 95px; */
+    vertical-align: bottom;
+    text-align: left;
+  }
+  .table-header-horiz .pricetd{
+    width:100px;
+    /* min-width: 55px;
+    max-width: 55px; */
+  }
+  .table-header-horiz .qntytd{
+    width:100px;
+    /* min-width: 30px;
+    max-width: 30px; */
+  }
+  .table-header-horiz .subtottd{
+    width:100px;
+    /* min-width: 60px;
+    max-width: 60px; */
+   }
+
+
+  .table-header-rotated .itemtd{
     width:145px;
     min-width: 145px;
     max-width: 145px;
   }
-  .pricetd{
+  .table-header-rotated .pricetd{
     width:50px;
     min-width: 50px;
     max-width: 50px;
   }
-  .qntytd{
+  .table-header-rotated .qntytd{
     width:25px;
     min-width: 25px;
     max-width: 25px;
   }
-  .subtottd{
+  .table-header-rotated .subtottd{
     width:60px;
     min-width: 60px;
     max-width: 60px;
@@ -74,28 +104,80 @@
     line-height: 0.8;
   }
 
-  .itemth{
+  .table-header-horiz thead > tr{
+      width:700px;
+      vertical-align:bottom;
+  }
+
+  .table-header-horiz .itemth{
+    width:100px;
+    /* min-width: 95px;
+    max-width: 95px; */
+    vertical-align: bottom;
+    text-align: left;
+  }
+  .table-header-horiz .priceth{
+    width:100px;
+    /* min-width: 55px;
+    max-width: 55px; */
+  }
+  .table-header-horiz .qntyth{
+    width:100px;
+ 
+    /* min-width: 30px;
+    max-width: 30px; */
+  }
+  .table-header-horiz .subtotth{
+    width:100px;
+    /* min-width: 60px;
+    max-width: 60px; */
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+  .table-header-rotated .itemth{
     width:95px;
     min-width: 95px;
     max-width: 95px;
     vertical-align: bottom;
     text-align: left;
   }
-  .priceth{
+  .table-header-rotated .priceth{
     width:55px;
     min-width: 55px;
     max-width: 55px;
   }
-  .qntyth{
+  .table-header-rotated .qntyth{
     width:30px;
     min-width: 30px;
     max-width: 30px;
   }
-  .subtotth{
+  .table-header-rotated .subtotth{
     width:60px;
     min-width: 60px;
     max-width: 60px;
    }
+
+
+
+
+
+
+
+
+
+
+
+
   
   .table-header-rotated th.rotate-45 > div{
     position: relative;
