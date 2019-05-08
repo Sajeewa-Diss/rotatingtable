@@ -1,7 +1,40 @@
-.table-header-rotated th.row-header{
-    overflow: hidden;
+/* .table-header-rotated th.row-header{ */
+    /* overflow: hidden; */
+  /* } */
+
+  .fixed_headers {
+    table-layout: fixed;
+    border-collapse: collapse;
   }
   
+  .fixed_headers thead tr {
+    display: block;
+    position: relative;
+  }
+  .fixed_headers tbody {
+    display: block;
+    overflow: auto;
+    height: 300px;
+  }
+
+  .fixed_headers tbody tr:nth-child(even) {
+    background-color: #EEE;
+  }
+  
+  .fixed_headers tfoot {
+    display: inline-block;
+    overflow: auto;
+    position: relative;
+
+    /* height: 300px; */
+  }
+
+
+
+
+
+
+
   .table-header-rotated td{
     /* width: 100px; */
     border-top: 1px solid #dddddd;
@@ -12,20 +45,30 @@
     overflow: hidden;
   }
 
-  .itemtd{
-    width:110px;
+  .table-header-rotated td.itemtd{
     text-align:left;
+  }
+
+  .itemtd{
+    width:145px;
+    min-width: 145px;
+    max-width: 145px;
   }
   .pricetd{
     width:50px;
+    min-width: 50px;
+    max-width: 50px;
   }
   .qntytd{
     width:25px;
+    min-width: 25px;
+    max-width: 25px;
   }
   .subtottd{
     width:60px;
+    min-width: 60px;
+    max-width: 60px;
   }
-
 
   .table-header-rotated th.rotate-45{
     height: 60px;
@@ -41,9 +84,11 @@
   }
 
   .itemth{
-    width:100px;
-    min-width: 100px;
-    max-width: 100px;
+    width:95px;
+    min-width: 95px;
+    max-width: 95px;
+    vertical-align: bottom;
+    text-align: left;
   }
   .priceth{
     width:55px;
@@ -72,9 +117,10 @@
     -o-transform:skew(-45deg,0deg);
     transform:skew(-45deg,0deg);
     overflow: hidden;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
-    border-top: 1px solid #dddddd;
+    /* border-style: dotted; */
+    border-left: 1px solid red;
+    border-right: 1px solid orange;
+    border-top: 1px solid blue;
   }
   
   .table-header-rotated th.rotate-45 span {
@@ -93,27 +139,23 @@
     white-space: nowrap; /*whether to display in one line or not*/
   }
 
-  /* .subtotth span{
-    position: relative;  
-    bottom:0;
-      color:red;
+    /* tfoot{
+        width:200px; */
+        /* position: absolute; */
+        /* min-width: 200px;
+        max-width: 200px; */
+    /* } */
+
+  .tablefoot{
+    font-weight: bold;
+    text-align: right;
+    /* width:auto; */
+  }
+
+  /* .tablefoot .totalcaption{
+      width:200px;
+      min-width: 200px;
+      max-width: 200px;
   } */
 
-  .fixed_headers {
-    table-layout: fixed;
-    border-collapse: collapse;
-  }
-  
-  .fixed_headers thead tr {
-    display: block;
-    position: relative;
-  }
-  .fixed_headers tbody {
-    display: block;
-    overflow: auto;
-    height: 300px;
-  }
-
-  .fixed_headers tbody tr:nth-child(even) {
-    background-color: #DDD;
-  }
+ 
