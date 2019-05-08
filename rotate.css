@@ -1,5 +1,5 @@
 .table-header-rotated th.row-header{
-    width: auto;
+    overflow: hidden;
   }
   
   .table-header-rotated td{
@@ -8,11 +8,13 @@
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     vertical-align: middle;
-    text-align: center;
+    text-align: right;
+    overflow: hidden;
   }
 
   .itemtd{
     width:110px;
+    text-align:left;
   }
   .pricetd{
     width:50px;
