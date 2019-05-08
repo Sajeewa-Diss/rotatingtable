@@ -388,10 +388,11 @@
     <table id="cartTable" class="table table-header-rotated fixed_headers">
       <thead>
         <tr>
-          <th class="rotate-45"><div><span>Item</span></div></th>
-          <th class="rotate-45"><div><span>Quantity</span></div></th>
-          <th class="rotate-45"><div><span>Price</span></div></th>
-          <th class="rotate-45"><div><span>Subtotal</span></div></th>
+          <!-- First column header is not rotated -->
+          <th class="itemth"><div><span>Item</span></div></th>
+          <th class="rotate-45 priceth"><div><span><br>Price (£)</span></div></th>
+          <th class="rotate-45 qntyth"><div><span>Quantity</span></div></th>
+          <th class="rotate-45 subtotth"><div><span><br>Subtotal (£)</span></div></th>
           <!-- Last column header is not rotated -->
           <th></th>
         </tr>
@@ -399,10 +400,10 @@
       <tbody>
       <!-- @foreach (var line in Model.Cart.Lines){ -->
         <tr>
-            <td class="text-left">Product.Name</td>
-            <td class="text-right">3</td>
-            <td class="text-right">500</td>
-            <td class="text-right">1500
+            <td class="text-left itemtd">Caviar (Vegan)</td>
+            <td class="text-right pricetd">500</td>
+            <td class="text-right qntytd">3</td>
+            <td class="text-right subtottd">8500
                 <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
             </td>
             <td>

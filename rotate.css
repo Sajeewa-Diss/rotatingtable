@@ -3,25 +3,61 @@
   }
   
   .table-header-rotated td{
-    width: 40px;
+    /* width: 100px; */
     border-top: 1px solid #dddddd;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     vertical-align: middle;
     text-align: center;
   }
-  
+
+  .itemtd{
+    width:110px;
+  }
+  .pricetd{
+    width:50px;
+  }
+  .qntytd{
+    width:25px;
+  }
+  .subtottd{
+    width:60px;
+  }
+
+
   .table-header-rotated th.rotate-45{
-    height: 80px;
-    width: 40px;
+    height: 60px;
+    /* width: 40px;
     min-width: 40px;
-    max-width: 40px;
+    max-width: 40px; */
     position: relative;
     vertical-align: bottom;
+    
     padding: 0;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.8;
   }
+
+  .itemth{
+    width:100px;
+    min-width: 100px;
+    max-width: 100px;
+  }
+  .priceth{
+    width:55px;
+    min-width: 55px;
+    max-width: 55px;
+  }
+  .qntyth{
+    width:30px;
+    min-width: 30px;
+    max-width: 30px;
+  }
+  .subtotth{
+    width:60px;
+    min-width: 60px;
+    max-width: 60px;
+   }
   
   .table-header-rotated th.rotate-45 > div{
     position: relative;
@@ -55,9 +91,15 @@
     white-space: nowrap; /*whether to display in one line or not*/
   }
 
+  /* .subtotth span{
+    position: relative;  
+    bottom:0;
+      color:red;
+  } */
+
   .fixed_headers {
     table-layout: fixed;
-    /* border-collapse: collapse; */
+    border-collapse: collapse;
   }
   
   .fixed_headers thead tr {
