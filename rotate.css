@@ -15,7 +15,7 @@
   .fixed_headers tbody {
     display: block;
     overflow: auto;
-    max-height: 46vh;
+    max-height: 46vh; /*if we set height alone, the footer can appear under a gap!*/
   }
 
   .fixed_headers tbody tr:nth-child(even) {
@@ -38,9 +38,21 @@
 /* #region table body detail  */
 
 .table-header-horiz tbody > tr{
-    width:550px;
     vertical-align:center;
     }
+
+
+#cartTable.table-header-horiz tbody > tr{
+    width:550px;
+    /* vertical-align:center; */
+    }
+
+#resultsTable.table-header-horiz tbody > tr{
+    width:750px;
+    /* vertical-align:center; */
+    }
+
+
 
   .table-header-rotated td{
     /* width: 100px; */
@@ -66,7 +78,7 @@
   }
 
   .table-header-horiz .res-itemtd{
-   width:100px;
+   width:150px;
    /* min-width: 95px;
    max-width: 95px; */
    /* vertical-align: bottom; */
@@ -74,19 +86,13 @@
  }
 
   .table-header-horiz .pricetd,
-  .table-header-horiz .res-pricetd{
-    width:100px;
-    /* min-width: 55px;
-    max-width: 55px; */
-  }
+  .table-header-horiz .res-pricetd,
   .table-header-horiz .qntytd,
-  .table-header-horiz .res-qntytd{
-    width:100px;
-    /* min-width: 30px;
-    max-width: 30px; */
-  }
+  .table-header-horiz .res-qntytd,
+  .table-header-horiz .res-npc-qntytd,
   .table-header-horiz .subtottd,
-  .table-header-horiz .res-subtottd{
+  .table-header-horiz .res-subtottd,
+  .table-header-horiz .res-npc-subtottd{
     width:100px;
     /* min-width: 60px;
     max-width: 60px; */
@@ -98,9 +104,9 @@
     max-width: 120px;
   }
   .table-header-rotated .res-itemtd{
-    width:145px;
-    min-width: 145px;
-    max-width: 145px;
+    width:105px;
+    min-width: 105px;
+    max-width: 105px;
   }
 
   .table-header-rotated .pricetd,
@@ -110,16 +116,23 @@
     max-width: 55px;
   }
   .table-header-rotated .qntytd,
-  .table-header-rotated .res-qntytd{
+  .table-header-rotated .res-qntytd,
+  .table-header-rotated .res-npc-qntytd{
     width:30px;
     min-width: 30px;
     max-width: 30px;
   }
-  .table-header-rotated .subtottd,
-  .table-header-rotated .res-subtottd{
+  .table-header-rotated .subtottd{
     width:60px;
     min-width: 60px;
     max-width: 60px;
+  }
+
+  .table-header-rotated .res-subtottd,
+  .table-header-rotated .res-npc-subtottd{
+    width:58px;
+    min-width: 58px;
+    max-width: 58px;
   }
 /* #endregion */
 
@@ -129,19 +142,25 @@
     height: 60px;
     position: relative;
     vertical-align: bottom;
-    
     padding: 0;
     font-size: 14px;
     line-height: 0.8;
   }
 
   .table-header-horiz thead > tr{
-      width:550px;
       vertical-align:bottom;
       border-bottom: 1px solid red;
   }
 
-  .table-header-horiz .itemth{
+  #cartTable.table-header-horiz thead > tr{
+    width:550px;
+    }
+  #resultsTable.table-header-horiz thead > tr{    
+    width:750px;
+    }
+
+  .table-header-horiz .itemth,
+  .table-header-horiz .res-itemth{
     width:150px;
     /* min-width: 95px;
     max-width: 95px; */
@@ -149,45 +168,18 @@
     text-align: left;
   }
 
-   .table-header-horiz .res-itemth{
-    width:100px;
-    /* min-width: 95px;
-    max-width: 95px; */
-    vertical-align: bottom;
-    text-align: left;
-  }
-
-  .table-header-horiz .priceth{
-    width:100px;
-    /* min-width: 55px;
-    max-width: 55px; */
-  }
-  .table-header-horiz .res-priceth{
-    width:100px;
-    /* min-width: 55px;
-    max-width: 55px; */
-  }
-
-  .table-header-horiz .qntyth{
-    width:100px;
-     /* min-width: 30px;
-    max-width: 30px; */
-  }
-  .table-header-horiz .res-qntyth{
-    width:100px;
-     /* min-width: 30px;
-    max-width: 30px; */
-  }
-  .table-header-horiz .subtotth{
-    width:100px;
-    /* min-width: 60px;
-    max-width: 60px; */
-   }
-   .table-header-horiz .res-subtotth{
-     width:100px;
-     /* min-width: 60px;
-     max-width: 60px; */
-    }
+  .table-header-horiz .priceth,
+  .table-header-horiz .res-priceth,
+  .table-header-horiz .qntyth,
+  .table-header-horiz .res-qntyth,
+  .table-header-horiz .res-npc-qntyth,
+  .table-header-horiz .subtotth,
+  .table-header-horiz .res-subtotth,
+  .table-header-horiz .res-npc-subtotth{
+        width:100px;
+        /* min-width: 60px;
+        max-width: 60px; */
+       }
 
   .table-header-rotated .itemth{
     width:110px;
@@ -212,13 +204,15 @@
     max-width: 55px;
   }
   .table-header-rotated .qntyth,
-  .table-header-rotated .res-qntyth{
+  .table-header-rotated .res-qntyth,
+  .table-header-rotated .res-npc-qntyth{
     width:30px;
     min-width: 30px;
     max-width: 30px;
   }
   .table-header-rotated .subtotth,
-  .table-header-rotated .res-subtotth{
+  .table-header-rotated .res-subtotth,
+  .table-header-rotated .res-npc-subtotth{
     width:60px;
     min-width: 60px;
     max-width: 60px;
@@ -266,14 +260,19 @@
 }
 
 .table-header-horiz .qntyth,
+.table-header-horiz .res-qntyth,
 .table-header-rotated .qntyth div,
- td.qntytd,
+.table-header-rotated .res-qntyth div,
+ td.qntytd, td.res-qntytd,
 .subtotth div, td.subtottd,
-.res-qntyth div, td.res-qntytd,
 .res-subtotth div, td.res-subtottd{
     background-color: rgba(0, 150, 255, 0.25);
 }
-/* 
-{
-    background-color:rgba(255, 255, 0, 0.3);
-} */
+
+.table-header-horiz .res-npc-qntyth,
+.table-header-rotated .res-npc-qntyth div,
+ td.res-npc-qntytd,
+.res-npc-subtotth div, td.res-npc-subtottd
+ {
+    background-color: rgba(255, 0, 0, 0.2);
+}

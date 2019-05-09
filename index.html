@@ -16,7 +16,7 @@
   <label for="" class="divider">cart  rotated table</label>
   <br/>
 
-<div class="scrollable-table-todo-remove">
+<div class="scrollable-table-todo-remove"><!--  style="display:inline" -->
     <!-- <table id="cartTable" class="table table-header-horiz fixed_headers"> -->
         <!-- <table id="cartTable" class="table table-header-rotated fixed_headers"> -->
             <table id="cartTable" class="table fixed_headers">
@@ -166,7 +166,7 @@
               <td class="text-left itemtd">Total:</td>
               <td class="text-right pricetd"></td>
               <td class="text-right qntytd"></td>
-              <td class="text-right subtottd">2599
+              <td class="text-right subtottd">25999
                   <!-- @Model.Cart.ComputeTotalValue().ToString("c0") -->
               </td>
               <td></td>
@@ -186,8 +186,10 @@
             <!-- First column header is not rotated -->
             <th class="res-itemth"><div><span>Item</span></div></th>
             <th class="rotate-45 res-priceth"><div><span><br>Price (£)</span></div></th>
-            <th class="rotate-45 res-qntyth"><div><span>Quantity</span></div></th>
+            <th class="rotate-45 res-qntyth"><div><span>Your Qty.</span></div></th>
             <th class="rotate-45 res-subtotth"><div><span><br>Subtotal (£)</span></div></th>
+            <th class="rotate-45 res-npc-qntyth"><div><span>NPC Qty.</span></div></th>
+            <th class="rotate-45 res-npc-subtotth"><div><span><br>Subtotal (£)</span></div></th>
             <!-- Last column header is not rotated -->
             <th></th>
           </tr>
@@ -201,14 +203,9 @@
               <td class="text-right res-subtottd">8500
                   <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
               </td>
-              <td>
-                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
-                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
-                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-                  <!-- } -->
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar X</td>
@@ -217,14 +214,9 @@
               <td class="text-right res-subtottd">8500
                   <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
               </td>
-              <td>
-                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
-                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
-                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-                  <!-- } -->
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar (Vegan)</td>
@@ -233,14 +225,9 @@
               <td class="text-right res-subtottd">8500
                   <!-- @((line.Quantity * line.Product.Price).ToString("c0")) -->
               </td>
-              <td>
-                  <!-- @using (Html.BeginForm("RemoveFromCart", "Cart")){ -->
-                      <!-- @Html.Hidden("ProductId", line.Product.ProductID) -->
-                      <!-- @Html.HiddenFor(x => x.ReturnUrl) -->
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-                  <!-- } -->
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar (Vegan)</td>
@@ -248,10 +235,9 @@
               <td class="text-right res-qntytd">3</td>
               <td class="text-right res-subtottd">8500
               </td>
-              <td>
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar (Vegan)</td>
@@ -259,10 +245,9 @@
               <td class="text-right res-qntytd">3</td>
               <td class="text-right res-subtottd">8500
               </td>
-              <td>
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar (Vegan)</td>
@@ -270,10 +255,9 @@
               <td class="text-right res-qntytd">3</td>
               <td class="text-right res-subtottd">8500
               </td>
-              <td>
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar (Vegan)</td>
@@ -281,10 +265,9 @@
               <td class="text-right res-qntytd">3</td>
               <td class="text-right res-subtottd">8500
               </td>
-              <td>
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar (Vegan)</td>
@@ -292,10 +275,9 @@
               <td class="text-right res-qntytd">3</td>
               <td class="text-right res-subtottd">8500
               </td>
-              <td>
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar (Vegan)</td>
@@ -303,10 +285,9 @@
               <td class="text-right res-qntytd">3</td>
               <td class="text-right res-subtottd">8500
               </td>
-              <td>
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
           <tr>
               <td class="text-left res-itemtd">Caviar (Vegan)</td>
@@ -314,10 +295,9 @@
               <td class="text-right res-qntytd">3</td>
               <td class="text-right res-subtottd">8500
               </td>
-              <td>
-                      <input class="btn btn-sm btn-warning"
-                            type="submit" value="Remove" />
-              </td>
+              <td class="text-right res-npc-qntytd">5</td>
+              <td class="text-right res-npc-subtottd">9999
+              <td></td>
           </tr>
 
         </tbody>
@@ -325,10 +305,12 @@
             <tr class="tablefoot">
                 <td class="text-left res-itemtd">Total:</td>
                 <td class="text-right res-pricetd"></td>
-                <td class="text-right res-res-qntytd"></td>
-                <td class="text-right res-subtottd">2599
+                <td class="text-right res-qntytd"></td>
+                <td class="text-right res-subtottd">25999
                     <!-- @Model.Cart.ComputeTotalValue().ToString("c0") -->
                 </td>
+                <td class="text-right res-npc-qntytd"></td>
+                <td class="text-right res-npc-subtottd">99999
                 <td></td>
             </tr>
         </tfoot>
@@ -391,6 +373,14 @@ function SetTableClassFn() {
     }else{
         $('#cartTable').addClass('table-header-horiz');
         $('#cartTable').removeClass('table-header-rotated');
+    }
+
+    if($(window).width() < 768) {
+        $('#resultsTable').addClass('table-header-rotated');
+        $('#resultsTable').removeClass('table-header-horiz');
+    }else{
+        $('#resultsTable').addClass('table-header-horiz');
+        $('#resultsTable').removeClass('table-header-rotated');
     }
 }
 
