@@ -98,6 +98,17 @@
     max-width: 60px; */
    }
 
+  .table-header-horiz .pricetd,
+  .table-header-horiz .res-pricetd,
+  .table-header-horiz .qntytd,
+  .table-header-horiz .res-qntytd,
+  .table-header-horiz .res-npc-qntytd,
+  .table-header-horiz .subtottd,
+  .table-header-horiz .res-subtottd,
+  .table-header-horiz .res-npc-subtottd{
+    padding-right: 2em;
+   }
+
   .table-header-rotated .itemtd{
     width:120px;
     min-width: 120px;
@@ -134,6 +145,17 @@
     min-width: 58px;
     max-width: 58px;
   }
+
+  .table-header-rotated .pricetd,
+  .table-header-rotated .res-pricetd,
+  .table-header-rotated .qntytd,
+  .table-header-rotated .res-qntytd,
+  .table-header-rotated .res-npc-qntytd,
+  .table-header-rotated .subtottd,
+  .table-header-rotated .res-subtottd,
+  .table-header-rotated .res-npc-subtottd{
+    padding-right: 0.5em;
+   }
 /* #endregion */
 
 
@@ -177,7 +199,7 @@
   .table-header-horiz .res-subtotth,
   .table-header-horiz .res-npc-subtotth{
         width:100px;
-        /* min-width: 60px;
+          /* min-width: 60px;
         max-width: 60px; */
        }
 
