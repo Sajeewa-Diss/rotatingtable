@@ -82,12 +82,17 @@
     max-width: 60px; */
    }
 
-  .table-header-rotated .itemtd,
+  .table-header-rotated .itemtd{
+    width:120px;
+    min-width: 120px;
+    max-width: 120px;
+  }
   .table-header-rotated .res-itemtd{
     width:145px;
     min-width: 145px;
     max-width: 145px;
   }
+
   .table-header-rotated .pricetd,
   .table-header-rotated .res-pricetd{
     width:50px;
@@ -153,7 +158,14 @@
     max-width: 60px; */
    }
 
-  .table-header-rotated .itemth,
+  .table-header-rotated .itemth{
+    width:110px;
+    min-width: 110px;
+    max-width: 110px;
+    vertical-align: bottom;
+    text-align: left;
+  }
+
   .table-header-rotated .res-itemth{
     width:95px;
     min-width: 95px;
@@ -161,6 +173,7 @@
     vertical-align: bottom;
     text-align: left;
   }
+
   .table-header-rotated .priceth,
   .table-header-rotated .res-priceth{
     width:55px;
