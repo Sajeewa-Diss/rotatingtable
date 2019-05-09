@@ -44,12 +44,10 @@
 
 #cartTable.table-header-horiz tbody > tr{
     width:550px;
-    /* vertical-align:center; */
     }
 
 #resultsTable.table-header-horiz tbody > tr{
     width:750px;
-    /* vertical-align:center; */
     }
 
 
@@ -73,7 +71,6 @@
     width:150px;
     /* min-width: 95px;
     max-width: 95px; */
-    /* vertical-align: bottom; */
     text-align: left;
   }
 
@@ -81,7 +78,6 @@
    width:150px;
    /* min-width: 95px;
    max-width: 95px; */
-   /* vertical-align: bottom; */
    text-align: left;
  }
 
