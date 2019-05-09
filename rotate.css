@@ -134,16 +134,6 @@
    }
 
 
-
-
-
-
-
-
-
-
-
-
   .table-header-rotated .itemth{
     width:95px;
     min-width: 95px;
@@ -190,8 +180,7 @@
     -o-transform:skew(-45deg,0deg);
     transform:skew(-45deg,0deg);
     overflow: hidden;
-    /* border-style: dotted; */
-    border-left: 1px solid red;
+    border-left: 1px solid red;       /* #dddddd; */
     border-right: 1px solid orange;
     border-top: 1px solid blue;
   }
@@ -213,5 +202,16 @@
   }
 
 
+.priceth div, td.pricetd{
+    background-color: rgba(255, 255, 0, 0.2);
+}
 
- 
+
+.qntyth div, td.qntytd,
+.subtotth div, td.subtottd{
+    background-color: rgba(0, 150, 255, 0.25);
+}
+/* 
+{
+    background-color:rgba(255, 255, 0, 0.3);
+} */

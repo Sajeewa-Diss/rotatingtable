@@ -452,7 +452,8 @@
 </table>
 <script>
 $(window).on('resize', function() {
-    if($(window).width() < 768) {
+  if($(window).width() < 1921) {
+    // if($(window).width() < 768) {
         $('#cartTable').addClass('table-header-rotated');
         $('#cartTable').removeClass('table-header-horiz');
     }else{
