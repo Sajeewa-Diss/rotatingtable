@@ -1,3 +1,4 @@
+/* #region table with fixed headers (incl stripes) */
 
   .fixed_headers {
     table-layout: fixed;
@@ -25,10 +26,19 @@
     position: relative;
   }
 
+  /* #endregion */
+
+  .table-header-horiz tbody > tr{
+    width:700px;
+    vertical-align:center;
+    }
+
   .tablefoot{
     font-weight: bold;
     text-align: right;
   }
+
+/* #region table detail  */
 
   .table-header-rotated td{
     /* width: 100px; */
@@ -40,60 +50,66 @@
     overflow: hidden;
   }
 
-  .table-header-rotated td.itemtd{
+  .table-header-rotated td.itemtd, 
+  .table-header-rotated td.res-itemtd {
     text-align:left;
   }
 
-  .table-header-horiz tbody > tr{
-    width:700px;
-    vertical-align:center;
-}
-
-.table-header-horiz .itemtd{
+   .table-header-horiz .itemtd,
+   .table-header-horiz .res-itemtd{
     width:100px;
     /* min-width: 95px;
     max-width: 95px; */
-    vertical-align: bottom;
+    /* vertical-align: bottom; */
     text-align: left;
   }
-  .table-header-horiz .pricetd{
+  .table-header-horiz .pricetd,
+  .table-header-horiz .res-pricetd{
     width:100px;
     /* min-width: 55px;
     max-width: 55px; */
   }
-  .table-header-horiz .qntytd{
+  .table-header-horiz .qntytd,
+  .table-header-horiz .res-qntytd{
     width:100px;
     /* min-width: 30px;
     max-width: 30px; */
   }
-  .table-header-horiz .subtottd{
+  .table-header-horiz .subtottd,
+  .table-header-horiz .res-subtottd{
     width:100px;
     /* min-width: 60px;
     max-width: 60px; */
    }
 
-
-  .table-header-rotated .itemtd{
+  .table-header-rotated .itemtd,
+  .table-header-rotated .res-itemtd{
     width:145px;
     min-width: 145px;
     max-width: 145px;
   }
-  .table-header-rotated .pricetd{
+  .table-header-rotated .pricetd,
+  .table-header-rotated .res-pricetd{
     width:50px;
     min-width: 50px;
     max-width: 50px;
   }
-  .table-header-rotated .qntytd{
+  .table-header-rotated .qntytd,
+  .table-header-rotated .res-qntytd{
     width:25px;
     min-width: 25px;
     max-width: 25px;
   }
-  .table-header-rotated .subtottd{
+  .table-header-rotated .subtottd,
+  .table-header-rotated .res-subtottd{
     width:60px;
     min-width: 60px;
     max-width: 60px;
   }
+/* #endregion */
 
+
+/* #region table header  */
   .table-header-rotated th.rotate-45{
     height: 60px;
     position: relative;
@@ -109,64 +125,62 @@
       vertical-align:bottom;
   }
 
-  .table-header-horiz .itemth{
+  .table-header-horiz .itemth,
+  .table-header-horiz .res-itemth{
     width:100px;
     /* min-width: 95px;
     max-width: 95px; */
     vertical-align: bottom;
     text-align: left;
   }
-  .table-header-horiz .priceth{
+  .table-header-horiz .priceth,
+  .table-header-horiz .res-priceth{
     width:100px;
     /* min-width: 55px;
     max-width: 55px; */
   }
-  .table-header-horiz .qntyth{
+  .table-header-horiz .qntyth,
+  .table-header-horiz .res-qntyth{
     width:100px;
  
     /* min-width: 30px;
     max-width: 30px; */
   }
-  .table-header-horiz .subtotth{
+  .table-header-horiz .subtotth,
+  .table-header-horiz .res-subtotth{
     width:100px;
     /* min-width: 60px;
     max-width: 60px; */
    }
 
-
-  .table-header-rotated .itemth{
+  .table-header-rotated .itemth,
+  .table-header-rotated .res-itemth{
     width:95px;
     min-width: 95px;
     max-width: 95px;
     vertical-align: bottom;
     text-align: left;
   }
-  .table-header-rotated .priceth{
+  .table-header-rotated .priceth,
+  .table-header-rotated .res-priceth{
     width:55px;
     min-width: 55px;
     max-width: 55px;
   }
-  .table-header-rotated .qntyth{
+  .table-header-rotated .qntyth,
+  .table-header-rotated .res-qntyth{
     width:30px;
     min-width: 30px;
     max-width: 30px;
   }
-  .table-header-rotated .subtotth{
+  .table-header-rotated .subtotth,
+  .table-header-rotated .res-subtotth{
     width:60px;
     min-width: 60px;
     max-width: 60px;
    }
 
-
-
-
-
-
-
-
-
-
-
+/* #endregion */
 
   
   .table-header-rotated th.rotate-45 > div{
@@ -202,13 +216,16 @@
   }
 
 
-.priceth div, td.pricetd{
+.priceth div, td.pricetd,
+.res-priceth div, td.res-pricetd{
     background-color: rgba(255, 255, 0, 0.2);
 }
 
 
 .qntyth div, td.qntytd,
-.subtotth div, td.subtottd{
+.subtotth div, td.subtottd,
+.res-qntyth div, td.res-qntytd,
+.res-subtotth div, td.res-subtottd{
     background-color: rgba(0, 150, 255, 0.25);
 }
 /* 
