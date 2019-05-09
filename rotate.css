@@ -1,3 +1,6 @@
+
+*, *::before, *::after {box-sizing: border-box;}
+
 /* #region table with fixed headers (incl stripes) */
 
   .fixed_headers {
@@ -12,33 +15,32 @@
   .fixed_headers tbody {
     display: block;
     overflow: auto;
-    height: 300px;
+    max-height: 46vh;
   }
 
   .fixed_headers tbody tr:nth-child(even) {
     background-color: #EEE;
   }
   
-  /* .fixed_headers tfoot { */
-    .table-header-rotated tfoot {
+  tfoot {
     display: inline-block;
     overflow: auto;
     position: relative;
+    margin-top:10px;
   }
-
-  /* #endregion */
-
-  .table-header-horiz tbody > tr{
-    width:700px;
-    vertical-align:center;
-    }
 
   .tablefoot{
     font-weight: bold;
     text-align: right;
   }
+  /* #endregion */
 
-/* #region table detail  */
+/* #region table body detail  */
+
+.table-header-horiz tbody > tr{
+    width:550px;
+    vertical-align:center;
+    }
 
   .table-header-rotated td{
     /* width: 100px; */
@@ -55,14 +57,22 @@
     text-align:left;
   }
 
-   .table-header-horiz .itemtd,
-   .table-header-horiz .res-itemtd{
-    width:100px;
+   .table-header-horiz .itemtd{
+    width:150px;
     /* min-width: 95px;
     max-width: 95px; */
     /* vertical-align: bottom; */
     text-align: left;
   }
+
+  .table-header-horiz .res-itemtd{
+   width:100px;
+   /* min-width: 95px;
+   max-width: 95px; */
+   /* vertical-align: bottom; */
+   text-align: left;
+ }
+
   .table-header-horiz .pricetd,
   .table-header-horiz .res-pricetd{
     width:100px;
@@ -95,15 +105,15 @@
 
   .table-header-rotated .pricetd,
   .table-header-rotated .res-pricetd{
-    width:50px;
-    min-width: 50px;
-    max-width: 50px;
+    width:55px;
+    min-width: 55px;
+    max-width: 55px;
   }
   .table-header-rotated .qntytd,
   .table-header-rotated .res-qntytd{
-    width:25px;
-    min-width: 25px;
-    max-width: 25px;
+    width:30px;
+    min-width: 30px;
+    max-width: 30px;
   }
   .table-header-rotated .subtottd,
   .table-header-rotated .res-subtottd{
@@ -126,37 +136,58 @@
   }
 
   .table-header-horiz thead > tr{
-      width:700px;
+      width:550px;
       vertical-align:bottom;
+      border-bottom: 1px solid red;
   }
 
-  .table-header-horiz .itemth,
-  .table-header-horiz .res-itemth{
+  .table-header-horiz .itemth{
+    width:150px;
+    /* min-width: 95px;
+    max-width: 95px; */
+    vertical-align: bottom;
+    text-align: left;
+  }
+
+   .table-header-horiz .res-itemth{
     width:100px;
     /* min-width: 95px;
     max-width: 95px; */
     vertical-align: bottom;
     text-align: left;
   }
-  .table-header-horiz .priceth,
+
+  .table-header-horiz .priceth{
+    width:100px;
+    /* min-width: 55px;
+    max-width: 55px; */
+  }
   .table-header-horiz .res-priceth{
     width:100px;
     /* min-width: 55px;
     max-width: 55px; */
   }
-  .table-header-horiz .qntyth,
-  .table-header-horiz .res-qntyth{
+
+  .table-header-horiz .qntyth{
     width:100px;
- 
-    /* min-width: 30px;
+     /* min-width: 30px;
     max-width: 30px; */
   }
-  .table-header-horiz .subtotth,
-  .table-header-horiz .res-subtotth{
+  .table-header-horiz .res-qntyth{
+    width:100px;
+     /* min-width: 30px;
+    max-width: 30px; */
+  }
+  .table-header-horiz .subtotth{
     width:100px;
     /* min-width: 60px;
     max-width: 60px; */
    }
+   .table-header-horiz .res-subtotth{
+     width:100px;
+     /* min-width: 60px;
+     max-width: 60px; */
+    }
 
   .table-header-rotated .itemth{
     width:110px;
@@ -207,9 +238,9 @@
     -o-transform:skew(-45deg,0deg);
     transform:skew(-45deg,0deg);
     overflow: hidden;
-    border-left: 1px solid red;       /* #dddddd; */
-    border-right: 1px solid orange;
-    border-top: 1px solid blue;
+    border-left: 1px solid orange;       /* #dddddd; */
+    border-right: 1px solid red;
+    border-top: 1px solid #dddddd;;
   }
   
   .table-header-rotated th.rotate-45 span {
@@ -234,8 +265,9 @@
     background-color: rgba(255, 255, 0, 0.2);
 }
 
-
-.qntyth div, td.qntytd,
+.table-header-horiz .qntyth,
+.table-header-rotated .qntyth div,
+ td.qntytd,
 .subtotth div, td.subtottd,
 .res-qntyth div, td.res-qntytd,
 .res-subtotth div, td.res-subtottd{
