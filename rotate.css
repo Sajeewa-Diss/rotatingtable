@@ -250,8 +250,8 @@
     -o-transform:skew(-45deg,0deg);
     transform:skew(-45deg,0deg);
     overflow: hidden;
-    border-left: 1px solid orange;       /* #dddddd; */
-    border-right: 1px solid red;
+    border-left: 1px solid #dddddd;;       /* #dddddd; */
+    border-right: 1px solid #dddddd;;
     border-top: 1px solid #dddddd;;
   }
   
@@ -284,7 +284,8 @@
  td.qntytd, td.res-qntytd,
 .subtotth div, td.subtottd,
 .res-subtotth div, td.res-subtottd{
-    background-color: rgba(0, 150, 255, 0.25);
+    /* background-color: rgba(0, 150, 255, 0.25);*/
+    background-color: rgba(0, 255, 150, 0.2); 
 }
 
 .table-header-horiz .res-npc-qntyth,
