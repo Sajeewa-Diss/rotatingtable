@@ -8,13 +8,12 @@
     <link href="splash.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
+<body onload="ShowSplash()">
     <div id="splashscreen">
         <h2>Welcome !</h2>
         Take a look at our new products, blablabla
         <img src="http://i.telegraph.co.uk/multimedia/archive/02182/kitten_2182000b.jpg" />
         
-        <a href="#" class="enter_link">Enter on the website</a>
     </div>
     
     <div>
@@ -25,9 +24,14 @@
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
     </div>
     <script>
-        $('.enter_link').click(function () {
-            $(this).parent('#splashscreen').fadeOut(500);
-        });
+        
+        function ShowSplash(){
+            $('#splashscreen').fadeOut(3000);
+        }
+        
+        // $('.enter_link').click(function () {
+        //     $(this).parent('#splashscreen').fadeOut(500);
+        // });
 
 
     </script>
