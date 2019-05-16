@@ -61,8 +61,6 @@
                 arr.push(Math.floor(Math.random() * (+stepdown - +stepup)) + +stepup);
             }
             document.write(arr); 
-
-
         }
 
 // #region particle code lift
@@ -133,13 +131,35 @@ var demo = Sketch.create({
 
 demo.setup = function() {
 
-    //return;
-    setTimeout(RunSpawn, 2000);
-    setTimeout(RunSpawn, 2500);
+    myArray = GetTimerArray();
 
-	// Set off some initial particles.
-
+    for (var i = 0; i < myArray.length; i++) { 
+        setTimeout(RunSpawn, myArray[i]);
+    }
 };
+
+//generate array with random numbers representing milliseconds
+function GetTimerArray(){
+
+    var min=1500; 
+    var stepup= 2700;
+    var stepdown=3300;
+    var max=4000;
+    //var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+    //document.write("Random Number Generated : " + random ); 
+
+    var arr = [];
+    //generate 5 rands evenly
+    for (var i=0; i<10; i++) {
+        arr.push(Math.floor(Math.random() * (+max - +min)) + +min);
+    }
+    //add 5 more rands between the two steps
+    for (var i=0; i<10; i++) {
+        arr.push(Math.floor(Math.random() * (+stepdown - +stepup)) + +stepup);
+    }
+    return arr; 
+}
+
 
 function RunSpawn(){
 	var i, x, y;
@@ -158,7 +178,7 @@ function RunSpawn(){
     var randomY =Math.floor(Math.random() * (+maxY - +minY)) + +minY; 
 
 
-	for ( i = 0; i < 100; i++ ) {
+	for ( i = 0; i < 25; i++ ) {
 		// x = ( demo.width * 0.5 ) + random( -75, 75 );
         x = randomX; 
 		y = randomY;
