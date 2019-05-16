@@ -37,7 +37,7 @@
         function ShowSplash(){
             setTimeout(() => {
                 $('#splashscreen').fadeOut(1000);
-            }, 6500);
+            }, 7500);
         }
 
         
@@ -134,16 +134,39 @@ var demo = Sketch.create({
 demo.setup = function() {
 
     //return;
+    setTimeout(RunSpawn, 2000);
+    setTimeout(RunSpawn, 2500);
 
 	// Set off some initial particles.
+
+};
+
+function RunSpawn(){
 	var i, x, y;
 
+
+    // var min=1500; 
+    // var max=4000;
+    // var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+
+    var minX= demo.width * 0.25; 
+    var maxX= demo.width * 0.75;
+    var randomX =Math.floor(Math.random() * (+maxX - +minX)) + +minX; 
+
+    var minY= demo.height * 0.25; 
+    var maxY= demo.height * 0.75;
+    var randomY =Math.floor(Math.random() * (+maxY - +minY)) + +minY; 
+
+
 	for ( i = 0; i < 100; i++ ) {
-		x = ( demo.width * 0.5 ) + random( -100, 100 );
-		y = ( demo.height * 0.5 ) + random( -100, 100 );
+		// x = ( demo.width * 0.5 ) + random( -75, 75 );
+        x = randomX; 
+		y = randomY;
+        // x = ( demo.width * 0.5 );
+		// y = ( demo.height * 0.5 );
 		demo.spawn( x, y );
 	}
-};
+}
 
 demo.spawn = function( x, y ) {
 
