@@ -16,17 +16,10 @@
         <img src="http://i.telegraph.co.uk/multimedia/archive/02182/kitten_2182000b.jpg" /> -->
 
         <div id="container">
-
-
             </div>
 
     </div>
 
-
-
-
-
-    
     <div>
         <h1>Our website is so cool</h1>
         Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
@@ -36,17 +29,48 @@
     </div>
     <script>
         
-        function ShowSplash(){
-            setTimeout(() => {
-                $('#splashscreen').fadeOut(1000);
-            }, 6000);
-        }
-        
         // $('.enter_link').click(function () {
         //     $(this).parent('#splashscreen').fadeOut(500);
         // });
-        function Particle( x, y, radius ) {
-	this.init( x, y, radius );
+
+
+        function ShowSplash(){
+            setTimeout(() => {
+                $('#splashscreen').fadeOut(1000);
+            }, 6500);
+        }
+
+        
+        function ShowSplash1(){
+
+            //generate arr1 with random numbers representing milliseconds
+            var min=1500; 
+            var stepup= 2700;
+            var stepdown=3300;
+            var max=4000;
+            //var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+            //document.write("Random Number Generated : " + random ); 
+
+            var arr = [];
+            //generate 10 rands evenly
+            for (var i=0; i<10; i++) {
+                arr.push(Math.floor(Math.random() * (+max - +min)) + +min);
+            }
+            //add 10 more rands betwen the two steps
+            for (var i=0; i<10; i++) {
+                arr.push(Math.floor(Math.random() * (+stepdown - +stepup)) + +stepup);
+            }
+            document.write(arr); 
+
+
+        }
+
+// #region particle code lift
+
+
+
+function Particle( x, y, radius ) {
+this.init( x, y, radius );
 }
 
 Particle.prototype = {
@@ -109,10 +133,12 @@ var demo = Sketch.create({
 
 demo.setup = function() {
 
+    //return;
+
 	// Set off some initial particles.
 	var i, x, y;
 
-	for ( i = 0; i < 20; i++ ) {
+	for ( i = 0; i < 100; i++ ) {
 		x = ( demo.width * 0.5 ) + random( -100, 100 );
 		y = ( demo.height * 0.5 ) + random( -100, 100 );
 		demo.spawn( x, y );
@@ -172,6 +198,8 @@ demo.mousemove = function() {
 		for ( j = 0; j < max; j++ ) demo.spawn( touch.x, touch.y );
 	}
 };
+
+// #endregion
 
     </script>
 </body>
